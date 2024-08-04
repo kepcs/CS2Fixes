@@ -27,7 +27,7 @@
 #define CMDFLAG_NOHELP	(1 << 0) // Don't show in !help menu
 
 #define COMMAND_PREFIX "c_"
-#define CHAT_PREFIX	" \7[kep]\1 "
+#define CHAT_PREFIX	"[\4KEP\1] "
 
 typedef void (*FnChatCommandCallback_t)(const CCommand &args, CCSPlayerController *player);
 

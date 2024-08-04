@@ -783,19 +783,19 @@ CON_COMMAND_CHAT(noclip, "- toggle noclip on yourself")
 
 	if (pPawn->m_iHealth() <= 0)
 	{
-		ClientPrint(player, HUD_PRINTTALK, CHAT_PREFIX "You cannot noclip while dead!");
+		ClientPrint(player, HUD_PRINTTALK, CHAT_PREFIX "您死亡中不能飞行");
 		return;
 	}
 
 	if (pPawn->m_nActualMoveType() == MOVETYPE_NOCLIP)
 	{
 		pPawn->SetMoveType(MOVETYPE_WALK);
-		ClientPrintAll(HUD_PRINTTALK, CHAT_PREFIX ADMIN_PREFIX "exited noclip.", player->GetPlayerName());
+		ClientPrintAll(HUD_PRINTTALK, CHAT_PREFIX ADMIN_PREFIX "开启了飞行", player->GetPlayerName());
 	}
 	else
 	{
 		pPawn->SetMoveType(MOVETYPE_NOCLIP);
-		ClientPrintAll(HUD_PRINTTALK, CHAT_PREFIX ADMIN_PREFIX "entered noclip.", player->GetPlayerName());
+		ClientPrintAll(HUD_PRINTTALK, CHAT_PREFIX ADMIN_PREFIX "关闭了飞行", player->GetPlayerName());
 	}
 }
 

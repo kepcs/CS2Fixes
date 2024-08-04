@@ -380,7 +380,7 @@ CON_COMMAND_CHAT(hide, "<distance> - hides nearby players")
 
 	if (distance > g_iMaxHideDistance || distance < 0)
 	{
-		ClientPrint(player, HUD_PRINTTALK, CHAT_PREFIX "You can only hide players between 0 and %i units away.", g_iMaxHideDistance);
+		ClientPrint(player, HUD_PRINTTALK, CHAT_PREFIX "你只能隐藏玩家从 0 到 %i 单位之间的玩家", g_iMaxHideDistance);
 		return;
 	}
 
@@ -402,9 +402,9 @@ CON_COMMAND_CHAT(hide, "<distance> - hides nearby players")
 	pZEPlayer->SetHideDistance(distance);
 
 	if (distance == 0)
-		ClientPrint(player, HUD_PRINTTALK, CHAT_PREFIX "Hiding players is now disabled.");
+		ClientPrint(player, HUD_PRINTTALK, CHAT_PREFIX "隐藏玩家现在被禁用");
 	else
-		ClientPrint(player, HUD_PRINTTALK, CHAT_PREFIX "Now hiding players within %i units.", distance);
+		ClientPrint(player, HUD_PRINTTALK, CHAT_PREFIX "现在将玩家隐藏在 %i 单位内", distance);
 }
 
 CON_COMMAND_CHAT(help, "- Display list of commands in console")

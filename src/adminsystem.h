@@ -51,7 +51,7 @@
 #define ADMFLAG_CUSTOM11	(1 << 24) // y
 #define ADMFLAG_ROOT		(1 << 25) // z
 
-#define ADMIN_PREFIX "Admin %s has "
+#define ADMIN_PREFIX "管理员 \4%s \1"
 
 void PrintSingleAdminAction(const char* pszAdminName, const char* pszTargetName, const char* pszAction, const char* pszAction2, const char* prefix);
 void PrintMultiAdminAction(ETargetType nType, const char* pszAdminName, const char* pszAction, const char* pszAction2, const char* prefix);
